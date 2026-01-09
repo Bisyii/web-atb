@@ -1,0 +1,54 @@
+:root {
+    --azul-atb: #0047AB;
+    --celeste-atb: #00AEEF;
+    --blanco: #FFFFFF;
+    --texto-oscuro: #333333;
+}
+
+.bg-atb-main {
+    background-color: var(--azul-atb);
+}
+
+.text-atb-main {
+    color: var(--azul-atb);
+}
+
+.btn-atb {
+    background-color: var(--celeste-atb);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-atb:hover {
+    background-color: var(--azul-atb);
+    transform: scale(1.05);
+}
+
+
+ body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.header-atb {
+    background-color: #0047AB; 
+}
+
+.footer-atb {
+    background-color: #212529;
+    flex-shrink: 0;
+}
+
+.card-custom {
+    transition: transform 0.3s;
+    border: none;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+}
