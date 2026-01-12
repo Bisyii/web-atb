@@ -1,54 +1,40 @@
-:root {
-    --azul-atb: #0047AB;
-    --celeste-atb: #00AEEF;
-    --blanco: #FFFFFF;
-    --texto-oscuro: #333333;
+/* style.css */
+
+html {
+    scroll-behavior: smooth;
 }
 
-.bg-atb-main {
-    background-color: var(--azul-atb);
+/* Fondo Hero: Usamos un overlay azul oscuro para que el texto resalte y combine con tu marca */
+.hero-bg {
+    background-image: linear-gradient(
+        rgba(0, 26, 102, 0.85), /* Azul oscuro ATB con transparencia */
+        rgba(0, 51, 204, 0.6)   /* Azul más claro */
+    ), url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Efecto Parallax simple */
 }
 
-.text-atb-main {
-    color: var(--azul-atb);
-}
-
-.btn-atb {
-    background-color: var(--celeste-atb);
-    color: white;
+/* Efectos de Hover para enlaces */
+a {
     transition: all 0.3s ease;
 }
 
-.btn-atb:hover {
-    background-color: var(--azul-atb);
-    transform: scale(1.05);
+/* Scrollbar personalizado azul */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-
- body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
-main {
-    flex: 1 0 auto;
+::-webkit-scrollbar-thumb {
+    background: #0033cc; /* Azul ATB */
+    border-radius: 5px;
 }
 
-.header-atb {
-    background-color: #0047AB; 
-}
-
-.footer-atb {
-    background-color: #212529;
-    flex-shrink: 0;
-}
-
-.card-custom {
-    transition: transform 0.3s;
-    border: none;
-}
-
-.card-custom:hover {
-    transform: translateY(-5px);
+::-webkit-scrollbar-thumb:hover {
+    background: #001a66;
 }

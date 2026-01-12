@@ -1,127 +1,280 @@
 <!DOCTYPE html>
-<html lang="es" class="h-100">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundación ATB</title>
-    <link rel="icon" type="image/jpg" href="Logo5.jpg">
+    <title>Fundación ATB | Comprender Nuestro Ser</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        atb: {
+                            blue: '#0033cc',    /* Azul intenso del logo */
+                            dark: '#001a66',    /* Azul oscuro para textos */
+                            light: '#4d79ff',   /* Azul claro para detalles */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="font-sans text-gray-700 smooth-scroll flex flex-col min-h-screen">
 
-<header class="py-4 shadow-sm" style="background-color: #000000;">
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-center">
-                
-                <div class="me-3" data-aos="fade-right">
-                    <img src="Logo5.jpg" alt="Logo" class="img-fluid rounded" 
-                         style="max-height: 100px; border: 2px ">
-                </div>
-                
-                <div class="text-start" data-aos="fade-left">
-                    <h1 class="fw-bold text-white m-0" style="font-size: 2rem; letter-spacing: 1px;">
-                        Fundación ATB
-                    </h1>
-                    <p class="text-info small text-uppercase m-0 d-none d-sm-block" style="font-size: 0.75rem; letter-spacing: 2px;">
-                        Unidos contra el Bullying
-                    </p>
-                </div>
+    <div class="bg-atb-blue text-white py-2 text-center text-sm font-bold tracking-wide">
+        ¿NECESITAS ORIENTACIÓN? ESCRÍBENOS AL <a href="https://wa.me/56996866254" target="_blank" class="underline hover:text-gray-200 transition">+56 9 9686 6254</a>
+    </div>
 
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="logo5.png" alt="Logo Fundación ATB" class="h-16 w-auto transition transform group-hover:scale-105">
+                <div class="hidden md:block">
+                    <span class="block text-2xl font-heading font-extrabold text-atb-dark leading-none">FUNDACIÓN ATB</span>
+                    <span class="block text-xs font-semibold text-atb-light tracking-widest">COMPRENSIÓN DEL SER</span>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 items-center font-semibold text-gray-600">
+                <a href="#filosofia" class="hover:text-atb-blue transition">Nuestra Filosofía</a>
+                <a href="#metodologia" class="hover:text-atb-blue transition">Qué Hacemos</a>
+                <a href="#equipo" class="hover:text-atb-blue transition">Equipo</a>
+                <a href="#contacto" class="bg-atb-blue text-white px-6 py-2 rounded-full hover:bg-atb-dark transition shadow-lg transform hover:-translate-y-0.5">
+                    Contáctanos
+                </a>
             </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-atb-blue text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t shadow-inner">
+            <a href="#filosofia" class="block px-6 py-4 text-gray-700 border-b hover:bg-blue-50">Nuestra Filosofía</a>
+            <a href="#metodologia" class="block px-6 py-4 text-gray-700 border-b hover:bg-blue-50">Qué Hacemos</a>
+            <a href="#equipo" class="block px-6 py-4 text-gray-700 border-b hover:bg-blue-50">Equipo</a>
+            <a href="#contacto" class="block px-6 py-4 text-atb-blue font-bold hover:bg-blue-100">Contáctanos</a>
+        </div>
+    </nav>
+
+    <header class="hero-bg h-[90vh] flex items-center justify-center text-center px-6 relative">
+        <div class="max-w-4xl animate-fade-in-up bg-black bg-opacity-30 p-8 rounded-3xl backdrop-blur-sm">
+            <span class="text-atb-light font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Fundación ATB presenta</span>
+            <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-white mb-6 leading-tight">
+                Comprender para <br><span class="text-blue-300">Sanar</span>
+            </h1>
+            <p class="text-xl text-gray-100 mb-10 font-light max-w-2xl mx-auto">
+                "Damos fe al proceso constructivo de conocerte para comprenderte. Somos el lugar que inspira tranquilidad y conecta con la paz."
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#metodologia" class="bg-atb-blue text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-blue-700 transition transform hover:scale-105 border-2 border-atb-blue">
+                    Nuestras Charlas
+                </a>
+                <a href="#contacto" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-atb-blue transition">
+                    Unirme
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 animate-bounce text-white text-2xl opacity-70">
+            <i class="fa-solid fa-chevron-down"></i>
         </div>
     </header>
-    
-    <main>
-            <div class="col-md-4 mb-4" data-aos="zoom-in">
-                    <div class="py-4">
-                        <h2 class="display-4 fw-bold" style="color: #0047AB;">
-                            Quienes Somos
-                            <br>
-                            <br>
-                        </h2>
+
+    <section id="filosofia" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-50 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+        
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-20 h-20 bg-atb-light opacity-20 rounded-full"></div>
+                    <img src="Screenshot 2026-01-12 205547.png" alt="Paz mental" class="rounded-3xl shadow-2xl relative z-10">
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-atb-blue rounded-full flex items-center justify-center text-white p-4 text-center shadow-lg z-20">
+                        <span class="font-bold text-sm">Sin Fines de Lucro</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-heading font-bold text-atb-dark mb-6">Apreciar el Sentir</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                        En <strong class="text-atb-blue">Fundación ATB</strong>, creemos que el bullying es un síntoma de algo más profundo. Nuestra visión es clara: <span class="italic">"La comprensión del ser"</span>.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                        Buscamos ser ese destello común donde conectes con la paz. Trabajamos para transformar el "vacío" —la ausencia del ser— en un proceso constructivo de autoconocimiento y empatía.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-peace text-atb-blue text-xl"></i>
+                            <span class="font-semibold text-gray-700">Conectar con la Paz</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-heart-pulse text-atb-blue text-xl"></i>
+                            <span class="font-semibold text-gray-700">Apreciar el Sentir</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-brain text-atb-blue text-xl"></i>
+                            <span class="font-semibold text-gray-700">Reflexión Crítica</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-hands-holding-circle text-atb-blue text-xl"></i>
+                            <span class="font-semibold text-gray-700">Espacios Seguros</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-atb-blue font-bold tracking-widest uppercase text-sm">Nuestro Método</span>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-atb-dark mt-2">¿Cómo generamos el cambio?</h2>
+                <p class="text-gray-600 mt-4 text-lg">
+                    No solo damos charlas, creamos experiencias. Nos enfocamos principalmente en establecimientos educacionales para crear ambientes de confianza.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border-l-8 border-atb-blue group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-atb-blue transition">
+                        <i class="fa-solid fa-microphone-lines text-2xl text-atb-blue group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-atb-dark">Ciclo de Charlas</h3>
+                    <p class="text-gray-600 mb-4">
+                        Intervenciones dinámicas de <strong>1.5 horas</strong> aproximadamente. Fomentamos la participación activa abordando:
+                    </p>
+                    <ul class="text-gray-500 space-y-2 mb-6 text-sm">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Tipos y efectos del Bullying</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Involucrados (Agresor, Víctima, Espectador)</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Reflexiones de vida</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border-l-8 border-indigo-500 group">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-indigo-500 transition">
+                        <i class="fa-solid fa-people-roof text-2xl text-indigo-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-atb-dark">Intervención Profunda</h3>
+                    <p class="text-gray-600">
+                        Presencia extendida en comunidades para lograr un <strong>cambio cultural sostenible</strong>. 
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                        Buscamos generar un impacto multinivel: estudiantes, padres y profesores, adaptando el mensaje para transformar el entorno hacia la comprensión.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipo" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-atb-dark mb-16">Nuestro Equipo</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <div class="flex flex-col items-center group">
+                    <div class="w-32 h-32 rounded-full bg-gray-200 mb-4 overflow-hidden border-4 border-transparent group-hover:border-atb-blue transition">
+                        <img src="https://ui-avatars.com/api/?name=Nicolas+Martinez&background=0033cc&color=fff" alt="Nicolas Martinez" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-lg text-gray-800">Nicolás Martínez</h4>
+                    <span class="text-sm text-atb-blue font-semibold">Fundador y Activista</span>
+                </div>
+
+                <div class="flex flex-col items-center group">
+                    <div class="w-32 h-32 rounded-full bg-gray-200 mb-4 overflow-hidden border-4 border-transparent group-hover:border-atb-blue transition">
+                        <img src="https://ui-avatars.com/api/?name=Martin+Perez&background=0033cc&color=fff" alt="Martin Perez" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-lg text-gray-800">Martín Pérez</h4>
+                    <span class="text-sm text-gray-500">Activista / RRSS</span>
+                </div>
+
+                <div class="flex flex-col items-center group">
+                    <div class="w-32 h-32 rounded-full bg-gray-200 mb-4 overflow-hidden border-4 border-transparent group-hover:border-atb-blue transition">
+                        <img src="https://ui-avatars.com/api/?name=Francisco+Carrizo&background=0033cc&color=fff" alt="Francisco Carrizo" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-lg text-gray-800">Francisco Carrizo</h4>
+                    <span class="text-sm text-gray-500">Activista / RRSS</span>
+                </div>
+
+                <div class="flex flex-col items-center group">
+                    <div class="w-32 h-32 rounded-full bg-gray-200 mb-4 overflow-hidden border-4 border-transparent group-hover:border-atb-blue transition">
+                        <img src="https://ui-avatars.com/api/?name=Nicolas+Diaz&background=0033cc&color=fff" alt="Nicolas Diaz" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-lg text-gray-800">Nicolás Díaz</h4>
+                    <span class="text-sm text-gray-500">Activista</span>
+                </div>
+
+                <div class="flex flex-col items-center group">
+                    <div class="w-32 h-32 rounded-full bg-gray-200 mb-4 overflow-hidden border-4 border-transparent group-hover:border-atb-blue transition">
+                        <img src="https://ui-avatars.com/api/?name=Daniel+Martinez&background=0033cc&color=fff" alt="Daniel Martinez" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-lg text-gray-800">Daniel Martínez</h4>
+                    <span class="text-sm text-gray-500">Activista</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-atb-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between gap-12 mb-12">
+                <div class="md:w-1/3">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logo-atb.png" alt="Logo Blanco" class="h-12 w-auto brightness-200 grayscale"> 
+                        <span class="text-2xl font-bold font-heading">ATB</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Una fundación sin fines de lucro dedicada a la comprensión del ser. Creamos espacios que inspiran tranquilidad y conectan con la paz.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/fundacion.atb" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-atb-blue transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="mailto:Fundacionatb@gmail.com" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-atb-blue transition">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
 
-        <div class="container my-5 py-5">
-            <div class="row align-items-center text-center">
-                
-                <div class="col-md-4 mb-4" data-aos="fade-right">
-                    <div class="p-4 shadow rounded bg-white border-top border-info border-4 card-custom">
-                        <h3 style="color: #00AEEF;">Nuestra Identidad</h3>
-                        <p class="text-muted">
-                            ATB es una fundacion sin fines de lucro, enfocada en la compresion del ser y la apreciacion del sentir.
-                            <br>Nos guiamos en base a tres objetivos, conscientizar, sensibilizar y nuestra esencia, ser ese lugar donde conectes con la paz
-                        </p>
-                    </div>
-
+                <div class="md:w-1/3">
+                    <h4 class="text-lg font-bold mb-6 border-b border-gray-700 pb-2 inline-block">Contacto</h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-atb-blue"></i>
+                            <span>Fundacionatb@gmail.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-atb-blue"></i>
+                            <span>+56 9 9686 6254</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-atb-blue"></i>
+                            <span>Chile</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-left">
-                    <div class="p-4 shadow rounded bg-white border-top border-primary border-4 card-custom">
-                        <h3 style="color: #0047AB;">Metodología de Trabajo</h3>
-                        <p class="text-muted">
-                            Funcionamos por medio de charlas participativas e interactivas de aproximadamente una hora y media aproximadamente.
-                            <br>Estas charlas giran en torno a la comprension del ser y la apreciacion del sentir, pero con un tema de base,
-                            como puede ser el bullying, musica, arte, entre otros
-                        </p>
-                    </div>
-                </div>
-
             </div>
-        </div>
 
-        <section class="container my-5 py-5 text-center" data-aos="fade-up">
-    <h2 class="display-4 fw-bold mb-5" style="color: #0047AB;">Contáctanos</h2>
-    
-    <div class="row g-4 justify-content-center">
-        <div class="col-md-3">
-            <div class="p-4 shadow-sm rounded bg-light border-bottom border-primary border-4">
-                <i class="bi bi-instagram fs-1" style="color: #E1306C;"></i>
-                <h4 class="mt-3">Instagram</h4>
-                <p class="text-muted">@fundacion.atb</p>
-                <a href="https://www.instagram.com/fundacion.atb/" target="_blank" class="btn btn-outline-primary btn-sm">Seguir</a>
+            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2026 Fundación ATB. Todos los derechos reservados.</p>
+                <p class="mt-2">Desarrollado con el objetivo de <span class="text-gray-400">Comprender nuestro ser</span>.</p>
             </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="p-4 shadow-sm rounded bg-light border-bottom border-primary border-4">
-                <i class="bi bi-envelope-fill fs-1" style="color: #0047AB;"></i>
-                <h4 class="mt-3">Email</h4>
-                <p class="text-muted">contacto@fundacionatb</p>
-                <a href="mailto:contacto@fundacionatb.cl" class="btn btn-outline-primary btn-sm">Enviar mensaje</a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="p-4 shadow-sm rounded bg-light border-bottom border-primary border-4">
-                <i class="bi bi-whatsapp fs-1" style="color: #25D366;"></i>
-                <h4 class="mt-3">WhatsApp</h4>
-                <p class="text-muted">+56 9 XXXX XXXX</p>
-                <a href="#" class="btn btn-outline-success btn-sm">Chatear</a>
-            </div>
-        </div>
-    </div>
-</section>
-    </main>
-
-    <footer class="footer-atb py-4 text-white text-center" style="background-color: #000000;">
-        <div class="container">
-            <p class="mb-1">© 2026 Fundación ATB</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Inicializar animaciones
-        AOS.init({
-            duration: 2000,
-            once: true
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
